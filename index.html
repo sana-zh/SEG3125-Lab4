@@ -1,0 +1,155 @@
+<!-- This file contains many elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+
+<!-- Images source: -->
+<!-- jule.jpg taken from https://www.freepik.com/premium-vector/cartoon-successful-hairdresser_3951066.htm -->
+<!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- The head should contain an appropriate title for your site -->
+  <head>
+    <title>Colonel By Bike Repair</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  </head>
+
+
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1>Welcome to Colonel By Bike Repair <i class="fas fa-bicycle"></i></h1>
+        <p>Most trusted repair shop of Ottawa</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="alert alert-danger alert-dismissible">
+	<button type="button" class="close" data-dismiss="alert">&times;</button>
+	<strong>Due to the COVID-19 pandemic, all services are by appointment only!</strong>
+      </div>
+    </div>
+
+    <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
+    <!-- Might be (or not) useful to show some information to the user -->
+    <div class="container p-3">
+      <h2>Services</h2>
+      <table class="table table-primary table-hover">
+        <tbody>
+          <tr>
+            <td>Tune-Up</td>
+            <td>$40</td>
+          </tr>
+          <tr>
+            <td>Pro Tune-Up</td>
+            <td>$60</td>
+          </tr>
+          <tr>
+            <td>Tire Change</td>
+            <td>$15</td>
+          </tr>
+          <tr>
+            <td>Repairs</td>
+            <td>$30/hour + Parts</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="container p-3">
+      <h2>Book an Appointment</h2>
+      <div id="accordion" class="pb-3">
+	<div class="card">
+          <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#collapseService">Choose a service</a>
+          </div>
+          <div id="collapseService" class="collapse show" data-parent="#accordion">
+            <div class="card-body">
+	      <div class="form-group">
+		<label for="exampleFormControlSelect2">Select one or more services to be performed</label>
+		<select multiple class="form-control" id="exampleFormControlSelect2">
+		  <option>Tune-Up</option>
+		  <option>Pro Tune-Up</option>
+		  <option>Tire Change</option>
+		  <option>Repairs</option>
+		</select>
+	      </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
+            </div>
+            <div id="collapseDate" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+		<p>What date?</p>
+		<!-- Bootstrap has various input components. Some examples are given here: -->
+		<!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
+		<div class="form-group row">
+                  <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
+                  <div class="col-10">
+                    <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="dateTimeInput">
+                  </div>
+		</div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your info</a>
+            </div>
+            <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+		<p>Your information so we can contact you</p>
+		<p>Form to enter name, email, phone</p>
+		<div class="form-group">
+		  <label for="exampleFormControlInput1">Name</label>
+		  <input class="form-control" id="exampleFormControlInput1">
+		</div>
+		<div class="form-group">
+		  <label for="exampleFormControlInput1">Email address</label>
+		  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+		</div>
+		<div class="form-group">
+		  <label for="exampleFormControlInput1">Phone number</label>
+		  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="(XXX)-XXX-XXXX">
+		</div>
+              </div>
+            </div>
+          </div>
+	</div>
+      </div>
+      <button type="button" class="btn btn-primary">Submit</button>
+    </div>
+    
+    <div class="container p-3">
+      <h2>Our Location</h2>
+      <div class="card" style="width: 18rem;">
+	<img class="card-img-top" src="./images/map.png" alt="522 Colonel By Drive">
+	<div class="card-body">
+	  <h5 class="card-title">522 Colonel By Drive</h5>
+	  <p class="card-text">Currently open for curbside dropoff and pickup:</p>
+	  <ul class="list-group">
+	    <li class="list-group-item">Monday: 8am to 8pm</li>
+	    <li class="list-group-item">Tuesday: 8am to 8pm</li>
+	    <li class="list-group-item">Wednesday: 8am to 8pm</li>
+	    <li class="list-group-item">Thursday: 8am to 8pm</li>
+	    <li class="list-group-item">Friday: 8am to 8pm</li>
+	    <li class="list-group-item">Saturday: 9am to 5pm</li>
+	    <li class="list-group-item">Sunday: Closed</li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>
